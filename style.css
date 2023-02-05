@@ -1,0 +1,57 @@
+/*css reset add box-sizing border-box to all elements*/
+*{margin: 0;padding: 0;border: 0;outline: 0;
+    font-size: 100%; font-family: Verdana, Geneva, Tahoma, sans-serif; sans-serif;
+    vertical-align: baseline;background: transparent;box-sizing: border-box;}
+  
+  
+    h1{font-size: 1.75em;
+        text-align: center;
+        margin:40px 0px;}
+  
+  .flex_container {
+    position:relative;
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+    box-flex:1;
+    box-orient: horizontal;
+    justify-content:center;}
+  
+  
+  .boxes{
+    width:30%;
+    background: grey;
+    border: 3px black solid;
+    padding:9px;
+    margin:15px ;
+    text-align: left; }
+  
+  .boxes > p{clear:both; font-size: 14px;}
+  
+ 
+  .menuheader{position:relative;
+    display:block;
+    float:right;
+    border: 3px black solid;
+    font-size: 1.25em;
+    text-align: center;
+    box-sizing: content-box;
+    padding: 5px 40px;
+    background: #f7c;
+    left:11px;
+    top:-11px;}
+  
+  
+  
+  .boxes:nth-of-type(2) > .menuheader{background: red; color: white;}
+
+  .boxes:nth-of-type(3) > .menuheader{background: yellow;}
+  
+  
+  
+  @media screen and (max-width: 991px){
+    .boxes:nth-of-type(-n+2) {width:46.7%;}
+    .boxes:nth-of-type(3) {width:96.6%;}}
+  
+  @media screen and (max-width: 767px){
+    .boxes:nth-of-type(n) {width:85%;}}
